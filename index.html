@@ -1,7 +1,112 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<title>CSS Grid Template 10</title><base href="/" target="_blank">
+
+<style>
+
+body { 
+
+  display: grid;
+
+  grid-template-areas: 
+
+    "header header ads"
+
+    "nav article article"
+
+    "nav footer footer";
+
+  grid-template-rows: 80px 1fr 70px;  
+
+  grid-template-columns: 20% 1fr 15%;
+
+  grid-row-gap: 10px;
+
+  grid-column-gap: 10px;
+
+  height: 100vh;
+
+  margin: 0;
+
+  }  
+
+header, footer, article, nav, div {
+
+  padding: 1.2em;
+
+  background: yellowgreen;
+
+  }
+
+#pageHeader {
+
+  grid-area: header;
+
+  }
+
+#pageFooter {
+
+  grid-area: footer;
+
+  }
+
+#mainArticle { 
+
+  grid-area: article;      
+
+  }
+
+#mainNav { 
+
+  grid-area: nav; 
+
+  }
+
+#siteAds { 
+
+  grid-area: ads; 
+
+  } 
+
+/* Stack the layout on small devices/viewports. */
+
+@media all and (max-width: 575px) {
+
+  body { 
+
+    grid-template-areas: 
+
+      "header"
+
+      "article"
+
+      "ads"
+
+      "nav"
+
+      "footer";
+
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+
+    grid-template-columns: 1fr;
+
+ }
+
+}
+
+</style>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+
+  <header id="pageHeader">Header</header>
+
+  <article id="mainArticle">Article</article>
+
+  <nav id="mainNav">Nav</nav>
+
+  <div id="siteAds">Ads</div>
+
+  <footer id="pageFooter">Footer</footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9032033b3a148bb7","version":"2025.1.0","r":1,"token":"f95a87206c5140fb90f2612ffd79569d","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body> 
